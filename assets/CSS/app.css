@@ -1,0 +1,249 @@
+/* reset all styles*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+
+
+*{
+  box-sizing: border-box;
+}
+
+/** Define global CSS variables in root **/
+:root {
+    --post-color: #F7FAFD;
+    --Red: hsl(1, 90%, 64%);
+    --Blue: hsl(219, 85%, 26%);
+    --background-color: #FFFFFF;
+    --paragraph-color:#6A6B73;
+    --member-color:#181A24;
+    --post-color:#626672;
+    --post-time_color:#9CA3AC;
+    --group-color:#0E2C6E;
+    --body-fonts: 'Plus Jakarta Sans','Arial', sans-serif;
+    --line-height: 1.35;
+     transition: all 0.6s ease-in;
+  }
+
+/*set overall styles*/
+html, body{
+    font-family: var(--body-fonts);
+    font-size: 1.125rem;
+    padding: 0.85rem 0.75rem;
+    color: var(--paragraph-color);
+    line-height: var(--line-height);
+    font-weight: 500;
+}
+
+img{
+    height: 3rem;
+    margin-right: 1em;
+}
+.container{
+    display: inline-block;
+    margin: 0 auto;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+/*styling all notifications*/
+.title{
+    font-size: 1.30rem;
+    color: var(--member-color);
+    font-weight: 800;
+}
+.notificationsNumber{
+    color: var(--background-color);
+    background-color: var(--Blue);
+    margin-left: 0.75rem;
+    padding: 0.15rem 0.75rem;
+    font-size: 1.15rem;
+    font-weight: 600;
+    border-radius: 5px;
+
+}
+
+.unread, .read{
+    margin: 2rem 0 0 1rem;
+}
+footer{
+    margin-top: 5rem;
+}
+.read{
+    margin-top: 0;
+}
+.fa-circle{
+    color: var(--Red);
+    margin-left: 0.35rem;
+}
+.noDisplay{
+    display:none;
+}
+.newPost, .postRead,.post{
+    margin: 1rem 0.5rem 0 0;
+    display: flex;
+    padding: 2rem 1rem;
+}
+.postRead{
+    margin: 0;
+}
+.post{
+    margin-top: 0;
+    padding: 0;
+}
+.postMessage{
+    margin: 2rem 0 0 0;
+    padding: 1rem 1rem;
+}
+
+.postTime{
+    color: var(--post-time_color);
+}
+
+.member{
+    color: var(--member-color);
+    font-weight: 800;
+}
+
+.memberPost{
+    color: var(--post-color);
+    font-weight: 700;
+}
+
+.group{
+    color: var(--group-color);
+    font-weight: 800;
+}
+/*style active states*/
+
+.newPost:hover, .postRead:hover{
+    background-color:#F7FAFD ;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.postRead:nth-child(1):hover{
+    background-color: inherit;
+}
+.postMessage:hover{
+    background-color: #F7FAFD ; 
+}
+
+.member:hover, .memberPost:hover,.group:hover{
+    color: var(--Blue);
+}
+
+.notificationStatus:hover{
+    cursor: pointer;
+    color: var(--Blue);
+    font:700;
+}
+
+/*Desktop:*/
+@media (min-width: 700px){
+    .commentImage{
+        margin-left: 10rem;
+        position: relative;
+        left: 4rem;
+    }
+}
+
+@media (min-width: 997px){
+    .commentImage{
+        margin-left: 10rem;
+        position: relative;
+        left: 15rem;
+    }
+    .container{
+        font-size: 1.25rem;
+    }
+    .title{
+        font-size: 2rem;
+    }
+    .notificationsNumber{
+        padding: 0.25rem 1rem;
+        font-size: 1.75rem;
+  
+    }
+    img{
+        height: 3rem;
+        margin-right: 1em;
+    }
+
+}
+@media (min-width: 1440px){
+
+
+    .container{
+        display: inline-block;
+        margin: 0 auto;
+        width: 80%;
+        padding: 5rem 0 2rem 17rem ;
+        font-size: 1.5rem;
+    }
+
+    img{
+        height: 5rem;
+        margin-right: 2em;
+    }
+
+    .title{
+        font-size: 2.30rem;
+    }
+
+    .notificationsNumber{
+        padding: 0.25rem 1rem;
+        font-size: 2.15rem;
+  
+    }
+
+    .commentImage{
+        margin-left: 25rem;
+        position: relative;
+        left: 3rem;
+    }
+}
+    
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+    <title>Frontend Mentor | Notifications page</title>
+    <!-- adiing all the styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,500;0,800;1,500;1,800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="assets/CSS/app.css">
+  </head>
+  <body>
+    <div class="main container">
+      <header class="notifications">
+        <div class="myNotifications">
+          <h1 class="title">Notifications <span class="notificationsNumber"></span>
+          </h1>
+        </div>
+        <div class="notificationStatus" id="notificationStatus">Mark all as read</div>
+      </header>
+
+      <section class="unread">
+        <div class="newPost first">
+          <div class="postImage">
+            <img src="./assets/images/avatar-mark-webber.webp" alt="mark's profile">
+          </div>
+          <div class="notifContent">
+            <p>
+              <span class="member">Mark Webber</span> reacted to your recent post <span class="memberPost">My first tournament today!</span>
+              <i class="fa-sharp fa-solid fa-circle fa-2xs icon" id="statusIcon"></i>
+            </p>
+            <p class="postTime">1m ago</p>
+          </div>
+        </div>
+        <div class="newPost second">
+          <div class="postImage">
+            <img src="./assets/images/avatar-angela-gray.webp" alt="Angela's Profile">
+          </div>
+          <div class="notifContent">
+            <p>
+              <span class="member">Angela Gray</span> followed you <i class="fa-sharp fa-solid fa-circle fa-2xs icon" id="statusIcon"></i>
+            </p>
+            <p class="postTime">5m ago</p>
+          </div>
+        </div>
+        <div class="newPost third">
+          <div class="postImage">
+            <img src="./assets/images/avatar-jacob-thompson.webp" alt="Jacob's Profile">
+          </div>
+          <div class="notifContent">
+            <p>
+              <span class="member">Jacob</span> Thompson has joined your group <span class="group">Chess Club</span>
+              <i class="fa-sharp fa-solid fa-circle fa-2xs icon" id="statusIcon"></i>
+            </p>
+            <p class="postTime">1 day ago</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="read">
+        <div class="postRead">
+          <div class="post">
+            <div class="postImage">
+              <img src="./assets/images/avatar-rizky-hasanuddin.webp" alt="rizky's profile">
+            </div>
+            <div class="notifContent">
+              <p>
+                <span class="member">Rizky Hasanuddin</span> sent you a private message
+              </p>
+              <p class="postTime">5 days ago</p>
+              <div class="postMessage">
+                <p> Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and I'm already having lots of fun and improving my game. </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="postRead">
+          <div class="postImage">
+            <img src="./assets/images/avatar-kimberly-smith.webp" alt="kimberly's profile">
+          </div>
+          <div class="notifContent">
+            <p>
+              <span class="member">Kimberly Smith</span> commented on your picture
+            </p>
+            <p class="postTime">1 week ago</p>
+          </div>
+          <div class="commentImage">
+            <img src="./assets/images/image-chess.webp" alt="">
+          </div>
+        </div>
+        <div class="postRead">
+          <div class="postImage">
+            <img src="./assets/images/avatar-nathan-peterson.webp" alt="nathan's profile">
+          </div>
+          <div class="notifContent">
+            <p>
+              <span class="member">Nathan Peterson</span> reacted to your recent post <span class="memberPost">5 end-game strategies to increase your win rate</span>
+            </p>
+            <p class="postTime">2 weeks ago</p>
+          </div>
+        </div>
+        <div class="postRead">
+          <div class="postImage">
+            <img src="./assets/images/avatar-anna-kim.webp" alt="anna's profile">
+          </div>
+          <div class="notifContent">
+            <p>
+              <span class="member">Anna Kim</span> left the group <span class="group">Chess Club</span>
+            </p>
+            <p class="postTime">2 weeks ago</p>
+          </div>
+        </div>
+      </section>
+      <footer>
+        <div class="attribution"> Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="Ivan Koueni">Ivan Koueni</a>. </div>
+    </div>
+    </footer>
+    <script src="assets/JS/app.js"></script>
+  </body>
+</html>
